@@ -1,4 +1,5 @@
 class PeopleController < ApplicationController
+  respond_to :js, :html
 
   def index
     @person = Person.new
