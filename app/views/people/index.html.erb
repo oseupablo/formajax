@@ -1,0 +1,27 @@
+<%= form_for(@person, remote: true) do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+  <%= f.label :email %>
+  <%= f.text_field :email %>
+  <%= f.submit 'Salvar' %>
+<% end %>
+
+<br/>
+
+<table>
+  <thead>
+    <tr>
+      <th>Nome</td>
+      <th>Email</td>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @people.each do |person| %>
+      <tr>
+        <td><%= person.name %></td>
+        <td><%= person.email %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
